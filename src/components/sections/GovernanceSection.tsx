@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { Shield, Eye, Clock, CheckCircle2 } from 'lucide-react';
+import officeImage from '@/assets/office-modern.jpg';
 
 const principles = [
   {
@@ -28,7 +29,13 @@ const coreBeliefs = [
 
 export function GovernanceSection() {
   return (
-    <section id="governance" className="py-24 lg:py-32 bg-muted/50 relative overflow-hidden">
+    <section id="governance" className="py-24 lg:py-32 relative overflow-hidden">
+      {/* Background image with overlay */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: `url(${officeImage})` }}
+      />
+      <div className="absolute inset-0 bg-background/95" />
       {/* Background pattern */}
       <div className="absolute inset-0 opacity-[0.02]">
         <div 

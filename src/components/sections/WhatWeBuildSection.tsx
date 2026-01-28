@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { Scale, Users, Wallet, Compass, MapPin } from 'lucide-react';
+import professionalImage from '@/assets/professional.jpg';
 
 const focusAreas = [
   { icon: Scale, text: 'Law and legal practice' },
@@ -11,7 +12,13 @@ const focusAreas = [
 
 export function WhatWeBuildSection() {
   return (
-    <section className="py-24 lg:py-32 bg-primary text-primary-foreground relative overflow-hidden">
+    <section className="py-24 lg:py-32 text-primary-foreground relative overflow-hidden">
+      {/* Background image with overlay */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: `url(${professionalImage})` }}
+      />
+      <div className="absolute inset-0 bg-primary/90" />
       {/* Background decoration */}
       <div className="absolute inset-0 opacity-10">
         <motion.div
