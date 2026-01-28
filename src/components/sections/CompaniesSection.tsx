@@ -210,7 +210,7 @@ function CompanyCard({ company, index }: { company: Company; index: number }) {
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 text-white/80 hover:text-white text-sm font-medium transition-colors group/link"
               >
-                Explore {company.name.split(" ")[1]}
+                Explore Cavenbridge {company.name.split(" ")[1]}
                 <ArrowRight
                   size={16}
                   className="transform group-hover/link:translate-x-1 transition-transform"
