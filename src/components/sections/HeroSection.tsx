@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { ArrowDown, Building2, Scale, Briefcase } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import heroBg from '@/assets/hero-bg.jpg';
 
 export function HeroSection() {
   const scrollToSection = (href: string) => {
@@ -12,8 +13,13 @@ export function HeroSection() {
 
   return (
     <section id="home" className="relative min-h-screen flex items-center overflow-hidden">
-      {/* Background with gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-hero" />
+      {/* Background image */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: `url(${heroBg})` }}
+      />
+      {/* Dark gradient overlay */}
+      <div className="absolute inset-0 bg-gradient-to-br from-primary/95 via-primary/85 to-primary/75" />
       
       {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden">
