@@ -1,26 +1,30 @@
-import { motion } from 'framer-motion';
-import { ArrowDown, Building2, Scale, Briefcase } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import heroBg from '@/assets/hero-bg.jpg';
+import { motion } from "framer-motion";
+import { ArrowDown, Building2, Scale, Briefcase } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import heroBg from "@/assets/hero-bg.jpg";
 
 export function HeroSection() {
   const scrollToSection = (href: string) => {
     const element = document.querySelector(href);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      element.scrollIntoView({ behavior: "smooth" });
     }
   };
 
   return (
-    <section id="home" className="relative min-h-screen flex items-center overflow-hidden">
+    <section
+      id="home"
+      className="relative min-h-screen flex items-center overflow-hidden"
+      style={{ paddingTop: "100px", paddingBottom: "50px" }}
+    >
       {/* Background image */}
-      <div 
+      <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{ backgroundImage: `url(${heroBg})` }}
       />
       {/* Dark gradient overlay */}
       <div className="absolute inset-0 bg-gradient-to-br from-primary/95 via-primary/85 to-primary/75" />
-      
+
       {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden">
         <motion.div
@@ -29,7 +33,8 @@ export function HeroSection() {
           transition={{ duration: 2 }}
           className="absolute -top-1/2 -right-1/4 w-[800px] h-[800px] rounded-full"
           style={{
-            background: 'radial-gradient(circle, hsl(35 40% 50% / 0.3) 0%, transparent 70%)',
+            background:
+              "radial-gradient(circle, hsl(35 40% 50% / 0.3) 0%, transparent 70%)",
           }}
         />
         <motion.div
@@ -38,15 +43,16 @@ export function HeroSection() {
           transition={{ duration: 2, delay: 0.5 }}
           className="absolute -bottom-1/4 -left-1/4 w-[600px] h-[600px] rounded-full"
           style={{
-            background: 'radial-gradient(circle, hsl(0 0% 100% / 0.1) 0%, transparent 70%)',
+            background:
+              "radial-gradient(circle, hsl(0 0% 100% / 0.1) 0%, transparent 70%)",
           }}
         />
         {/* Grid pattern overlay */}
-        <div 
+        <div
           className="absolute inset-0 opacity-[0.03]"
           style={{
             backgroundImage: `linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)`,
-            backgroundSize: '50px 50px',
+            backgroundSize: "50px 50px",
           }}
         />
       </div>
@@ -87,9 +93,10 @@ export function HeroSection() {
             transition={{ duration: 0.6, delay: 0.6 }}
             className="text-lg md:text-xl text-white/80 max-w-2xl mb-10 leading-relaxed"
           >
-            CavenBridge Group is a multi-disciplinary institutional platform operating across law, 
-            work, capital, consulting, and long-term ventures. We build, govern, and scale organisations 
-            at the intersection of markets, regulation, and state authority.
+            CavenBridge Group is a multi-disciplinary institutional platform
+            operating across law, work, capital, consulting, and long-term
+            ventures. We build, govern, and scale organisations at the
+            intersection of markets, regulation, and state authority.
           </motion.p>
 
           {/* CTAs */}
@@ -102,15 +109,15 @@ export function HeroSection() {
             <Button
               size="lg"
               className="bg-white text-primary hover:bg-white/90 font-medium px-8"
-              onClick={() => scrollToSection('#companies')}
+              onClick={() => scrollToSection("#companies")}
             >
               Explore Our Companies
             </Button>
             <Button
               size="lg"
               variant="outline"
-              className="border-white/30 text-white hover:bg-white/10 font-medium px-8"
-              onClick={() => scrollToSection('#governance')}
+              className="border-white/30 text-white bg-white/10 font-medium px-8"
+              onClick={() => scrollToSection("#governance")}
             >
               Governance & Philosophy
             </Button>
@@ -121,7 +128,7 @@ export function HeroSection() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 1 }}
-            className="grid grid-cols-3 gap-6 mt-16 pt-16 border-t border-white/10 max-w-xl"
+            className="grid grid-cols-3 gap-6 mt-9 pt-4 border-t border-white/10 max-w-xl"
           >
             <div className="text-center">
               <Scale className="w-8 h-8 text-accent mx-auto mb-3" />
@@ -147,7 +154,7 @@ export function HeroSection() {
         className="absolute bottom-8 left-1/2 -translate-x-1/2"
       >
         <motion.button
-          onClick={() => scrollToSection('#companies')}
+          onClick={() => scrollToSection("#companies")}
           animate={{ y: [0, 10, 0] }}
           transition={{ duration: 2, repeat: Infinity }}
           className="text-white/60 hover:text-white transition-colors flex flex-col items-center gap-2"

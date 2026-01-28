@@ -1,7 +1,15 @@
-import { motion } from 'framer-motion';
-import { ArrowRight, Scale, Users, TrendingUp, Compass, TreePine, Lightbulb } from 'lucide-react';
-import { Badge } from '@/components/ui/badge';
-import { cn } from '@/lib/utils';
+import { motion } from "framer-motion";
+import {
+  ArrowRight,
+  Scale,
+  Users,
+  TrendingUp,
+  Compass,
+  TreePine,
+  Lightbulb,
+} from "lucide-react";
+import { Badge } from "@/components/ui/badge";
+import { cn } from "@/lib/utils";
 
 interface Company {
   name: string;
@@ -14,52 +22,59 @@ interface Company {
 
 const companies: Company[] = [
   {
-    name: 'CavenBridge Advocates',
-    tagline: 'The Future of Law',
-    description: 'A law firm focused on legal practice at the institutional level. We operate beyond transactional advice, supporting clients on legal structure, governance, risk, and long-term positioning.',
+    name: "CavenBridge Advocates",
+    tagline: "The Future of Law",
+    description:
+      "A law firm focused on legal practice at the institutional level. We operate beyond transactional advice, supporting clients on legal structure, governance, risk, and long-term positioning.",
     icon: Scale,
     comingSoon: false,
-    gradient: 'from-slate-700 to-slate-900',
+    gradient: "from-emerald-800 to-emerald-950",
+    link: "https://advocates.cavenbridge.com/",
   },
   {
-    name: 'CavenBridge Strata',
-    tagline: 'The Future of Work',
-    description: 'An employer-of-record and employment-risk infrastructure firm. We operate the employer layer for organisations in high-friction labour markets, converting uncertainty into governed, predictable cost.',
+    name: "CavenBridge Strata",
+    tagline: "The Future of Work",
+    description:
+      "An employer-of-record and employment-risk infrastructure firm. We operate the employer layer for organisations in high-friction labour markets, converting uncertainty into governed, predictable cost.",
     icon: Users,
     comingSoon: false,
-    gradient: 'from-zinc-700 to-zinc-900',
+    gradient: "from-zinc-700 to-zinc-900",
   },
   {
-    name: 'CavenBridge Capital',
-    tagline: 'The Future of Capital',
-    description: 'Capital formation, market access, and investment structuring across emerging and frontier contexts. Disciplined exposure grounded in governance and long-term value creation.',
+    name: "CavenBridge Capital",
+    tagline: "The Future of Capital",
+    description:
+      "Capital formation, market access, and investment structuring across emerging and frontier contexts. Disciplined exposure grounded in governance and long-term value creation.",
     icon: TrendingUp,
     comingSoon: true,
-    gradient: 'from-stone-700 to-stone-900',
+    gradient: "from-stone-700 to-stone-900",
   },
   {
-    name: 'CavenBridge LLP',
-    tagline: 'The Future of Consulting',
-    description: 'A strategy and advisory firm focused on direction, governance, and institutional design. Advising organisations navigating complexity shaped by regulation, politics, and capital.',
+    name: "CavenBridge LLP",
+    tagline: "The Future of Consulting",
+    description:
+      "A strategy and advisory firm focused on direction, governance, and institutional design. Advising organisations navigating complexity shaped by regulation, politics, and capital.",
     icon: Compass,
     comingSoon: true,
-    gradient: 'from-neutral-700 to-neutral-900',
+    gradient: "from-neutral-700 to-neutral-900",
   },
   {
-    name: 'The Grove by CavenBridge',
-    tagline: 'A Nile Retreat, by Design',
-    description: 'A long-horizon hospitality and place-based venture located on the River Nile in Jinja. A quiet, design-led retreat reflecting our belief that place-making requires the same discipline as law or capital.',
+    name: "The Grove by CavenBridge",
+    tagline: "A Nile Retreat, by Design",
+    description:
+      "A long-horizon hospitality and place-based venture located on the River Nile in Jinja. A quiet, design-led retreat reflecting our belief that place-making requires the same discipline as law or capital.",
     icon: TreePine,
     comingSoon: true,
-    gradient: 'from-emerald-800 to-emerald-950',
+    gradient: "from-emerald-800 to-emerald-950",
   },
   {
-    name: 'CavenBridge Ventures',
-    tagline: 'Long-Horizon Innovation',
-    description: 'Exploring new frontiers in institutional development. Building tomorrow\'s ventures with the same principled approach that defines our established companies.',
+    name: "CavenBridge Ventures",
+    tagline: "Long-Horizon Innovation",
+    description:
+      "Exploring new frontiers in institutional development. Building tomorrow's ventures with the same principled approach that defines our established companies.",
     icon: Lightbulb,
     comingSoon: true,
-    gradient: 'from-amber-800 to-amber-950',
+    gradient: "from-amber-800 to-amber-950",
   },
 ];
 
@@ -105,8 +120,9 @@ export function CompaniesSection() {
             Our Companies
           </h2>
           <p className="text-muted-foreground text-lg leading-relaxed">
-            Each CavenBridge company is distinct in function and mandate, yet aligned in philosophy. 
-            Together, they represent a coherent approach to the future of institutional practice.
+            Each CavenBridge company is distinct in function and mandate, yet
+            aligned in philosophy. Together, they represent a coherent approach
+            to the future of institutional practice.
           </p>
         </motion.div>
 
@@ -132,9 +148,10 @@ export function CompaniesSection() {
           className="mt-16 text-center"
         >
           <p className="text-muted-foreground italic max-w-2xl mx-auto">
-            "CavenBridge Group is not a holding company for unrelated businesses. 
-            Each entity is purpose-built to address a specific institutional domain, 
-            using disciplined governance and long-term thinking."
+            "CavenBridge Group is not a holding company for unrelated
+            businesses. Each entity is purpose-built to address a specific
+            institutional domain, using disciplined governance and long-term
+            thinking."
           </p>
         </motion.div>
       </div>
@@ -144,24 +161,21 @@ export function CompaniesSection() {
 
 function CompanyCard({ company, index }: { company: Company; index: number }) {
   const Icon = company.icon;
-  
+
   return (
-    <motion.div
-      variants={cardVariants}
-      className="group relative"
-    >
-      <div className={cn(
-        "relative h-full rounded-2xl overflow-hidden transition-all duration-500 group-hover:-translate-y-2",
-        "bg-gradient-to-br",
-        company.gradient,
-        "shadow-card group-hover:shadow-card-hover"
-      )}>
+    <motion.div variants={cardVariants} className="group relative">
+      <div
+        className={cn(
+          "relative h-full rounded-2xl overflow-hidden transition-all duration-500 group-hover:-translate-y-2",
+          "bg-gradient-to-br",
+          company.gradient,
+          "shadow-card group-hover:shadow-card-hover",
+        )}
+      >
         {/* Coming Soon Badge */}
         {company.comingSoon && (
           <div className="absolute top-4 right-4 z-10">
-            <Badge className="badge-coming-soon">
-              Coming Soon
-            </Badge>
+            <Badge className="badge-coming-soon">Coming Soon</Badge>
           </div>
         )}
 
@@ -191,13 +205,15 @@ function CompanyCard({ company, index }: { company: Company; index: number }) {
           {!company.comingSoon && (
             <div className="mt-6 pt-6 border-t border-white/10">
               <a
-                href="#"
+                href={company?.link}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 text-white/80 hover:text-white text-sm font-medium transition-colors group/link"
               >
-                Explore {company.name.split(' ')[1]}
-                <ArrowRight 
-                  size={16} 
-                  className="transform group-hover/link:translate-x-1 transition-transform" 
+                Explore {company.name.split(" ")[1]}
+                <ArrowRight
+                  size={16}
+                  className="transform group-hover/link:translate-x-1 transition-transform"
                 />
               </a>
             </div>
