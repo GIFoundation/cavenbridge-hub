@@ -164,73 +164,75 @@ function CompanyCard({ company, index }: { company: Company; index: number }) {
 
   return (
     <motion.div variants={cardVariants} className="group relative">
-      <div
-        className={cn(
-          "relative h-full rounded-2xl overflow-hidden transition-all duration-500 group-hover:-translate-y-2",
-          "bg-gradient-to-br",
-          company.gradient,
-          "shadow-card group-hover:shadow-card-hover",
-        )}
-      >
-        {/* Coming Soon Badge */}
-        {company.comingSoon && (
-          <div className="absolute top-4 right-4 z-10">
-            <Badge className="badge-coming-soon">Coming Soon</Badge>
-          </div>
-        )}
-
-        {/* Card Content */}
-        <div className="p-8 h-full flex flex-col">
-          {/* Icon */}
-          <div className="mb-6">
-            <div className="w-14 h-14 rounded-xl bg-white/10 backdrop-blur-sm flex items-center justify-center group-hover:bg-white/20 transition-colors">
-              <Icon className="w-7 h-7 text-white" />
-            </div>
-          </div>
-
-          {/* Text Content */}
-          <div className="flex-1">
-            <p className="text-white/60 text-sm font-medium tracking-wide uppercase mb-2">
-              {company.tagline}
-            </p>
-            <h3 className="font-display text-xl lg:text-2xl font-semibold text-white mb-4">
-              {company.name}
-            </h3>
-            <p className="text-white/70 text-sm leading-relaxed">
-              {company.description}
-            </p>
-          </div>
-
-          {/* CTA */}
-          {!company.comingSoon && (
-            <div className="mt-6 pt-6 border-t border-white/10">
-              <a
-                href={company?.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-white/80 hover:text-white text-sm font-medium transition-colors group/link"
-              >
-                Explore Cavenbridge {company.name.split(" ")[1]}
-                <ArrowRight
-                  size={16}
-                  className="transform group-hover/link:translate-x-1 transition-transform"
-                />
-              </a>
-            </div>
+      <a href={company?.link} target="_blank" rel="noopener noreferrer">
+        <div
+          className={cn(
+            "relative h-full rounded-2xl overflow-hidden transition-all duration-500 group-hover:-translate-y-2",
+            "bg-gradient-to-br",
+            company.gradient,
+            "shadow-card group-hover:shadow-card-hover",
           )}
-
+        >
+          {/* Coming Soon Badge */}
           {company.comingSoon && (
-            <div className="mt-6 pt-6 border-t border-white/10">
-              <span className="text-white/50 text-sm">
-                More details coming soon
-              </span>
+            <div className="absolute top-4 right-4 z-10">
+              <Badge className="badge-coming-soon">Coming Soon</Badge>
             </div>
           )}
-        </div>
 
-        {/* Hover gradient overlay */}
-        <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none" />
-      </div>
+          {/* Card Content */}
+          <div className="p-8 h-full flex flex-col">
+            {/* Icon */}
+            <div className="mb-6">
+              <div className="w-14 h-14 rounded-xl bg-white/10 backdrop-blur-sm flex items-center justify-center group-hover:bg-white/20 transition-colors">
+                <Icon className="w-7 h-7 text-white" />
+              </div>
+            </div>
+
+            {/* Text Content */}
+            <div className="flex-1">
+              <p className="text-white/60 text-sm font-medium tracking-wide uppercase mb-2">
+                {company.tagline}
+              </p>
+              <h3 className="font-display text-xl lg:text-2xl font-semibold text-white mb-4">
+                {company.name}
+              </h3>
+              <p className="text-white/70 text-sm leading-relaxed">
+                {company.description}
+              </p>
+            </div>
+
+            {/* CTA */}
+            {!company.comingSoon && (
+              <div className="mt-6 pt-6 border-t border-white/10">
+                <a
+                  href={company?.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-white/80 hover:text-white text-sm font-medium transition-colors group/link"
+                >
+                  Explore Cavenbridge {company.name.split(" ")[1]}
+                  <ArrowRight
+                    size={16}
+                    className="transform group-hover/link:translate-x-1 transition-transform"
+                  />
+                </a>
+              </div>
+            )}
+
+            {company.comingSoon && (
+              <div className="mt-6 pt-6 border-t border-white/10">
+                <span className="text-white/50 text-sm">
+                  More details coming soon
+                </span>
+              </div>
+            )}
+          </div>
+
+          {/* Hover gradient overlay */}
+          <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none" />
+        </div>
+      </a>
     </motion.div>
   );
 }
