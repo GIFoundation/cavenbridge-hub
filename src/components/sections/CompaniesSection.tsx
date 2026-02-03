@@ -39,6 +39,7 @@ const companies: Company[] = [
     icon: Users,
     comingSoon: false,
     gradient: "from-zinc-700 to-zinc-900",
+    link: "https://strata.cavenbridge.com/",
   },
   {
     name: "CavenBridge Capital",
