@@ -42,6 +42,16 @@ const companies: Company[] = [
     link: "https://strata.cavenbridge.com/",
   },
   {
+    name: "CavenBridge Analytica",
+    tagline: "The Future of Consulting",
+    description:
+      "A strategy and advisory firm focused on direction, governance, and institutional design. Advising organisations navigating complexity shaped by regulation, politics, and capital.",
+    icon: Compass,
+    comingSoon: false,
+    gradient: "from-neutral-700 to-neutral-900",
+    link: "https://analytica.cavenbridge.com/",
+  },
+  {
     name: "CavenBridge Capital",
     tagline: "The Future of Capital",
     description:
@@ -49,15 +59,6 @@ const companies: Company[] = [
     icon: TrendingUp,
     comingSoon: true,
     gradient: "from-stone-700 to-stone-900",
-  },
-  {
-    name: "CavenBridge LLP",
-    tagline: "The Future of Consulting",
-    description:
-      "A strategy and advisory firm focused on direction, governance, and institutional design. Advising organisations navigating complexity shaped by regulation, politics, and capital.",
-    icon: Compass,
-    comingSoon: true,
-    gradient: "from-neutral-700 to-neutral-900",
   },
   {
     name: "The Grove by CavenBridge",
