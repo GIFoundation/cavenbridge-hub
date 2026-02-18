@@ -42,14 +42,14 @@ const companies: Company[] = [
     link: "https://strata.cavenbridge.com/",
   },
   {
-    name: "CavenBridge Analytica",
+    name: "CavenBridge Analytqa",
     tagline: "The Future of Consulting",
     description:
       "A strategy and advisory firm focused on direction, governance, and institutional design. Advising organisations navigating complexity shaped by regulation, politics, and capital.",
     icon: Compass,
     comingSoon: false,
     gradient: "from-neutral-700 to-neutral-900",
-    link: "https://analytica.cavenbridge.com/",
+    link: "https://analytqa.com/",
   },
   {
     name: "CavenBridge Capital",
